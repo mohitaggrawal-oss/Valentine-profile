@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Profile ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffd6e7, #ffc2d1);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: #c9184a;
+    }
+    header h1 { font-size: 42px; }
+    header p { font-size: 18px; margin-top: 10px; }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      gap: 25px;
+      padding-bottom: 40px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .profile {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .profile img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    h2 { color: #d6336c; margin-bottom: 15px; }
+    ul { list-style: none; }
+    ul li { margin-bottom: 8px; }
+    .hobbies span {
+      display: inline-block;
+      background: #ffe0ec;
+      padding: 8px 14px;
+      border-radius: 20px;
+      margin: 5px;
+    }
+    .social a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #c9184a;
+      font-weight: 600;
+    }
+    .valentine-msg {
+      text-align: center;
+      font-size: 18px;
+      background: #ffccd5;
+      border-radius: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #6c757d;
+    }
+    .heart {
+      position: fixed;
+      color: red;
+      animation: float 5s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+    }
+    @media(max-width:768px){
+      .profile { grid-template-columns: 1fr; text-align: center; }
+      .profile img { margin: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MOHIT AGGARWAL ❤️</h1>
+  <p>"A little love, laughter & happily ever after 💕"</p>
+</header>
+
+<div class="container">
+
+  <div class="card profile">
+    <img src="1.jpeg" alt="Profile Picture">
+    <div>
+      <h2>Personal Details</h2>
+      <ul>
+        <li><strong>Age :</strong> 18 </li>
+        <li><strong>City:</strong> Palwal </li>
+        <li><strong>Email:</strong> mohitaggrawal060@gmail.com</li>
+        <li><strong>Phone:</strong> 9084675528 </li>
+        <li><strong>Relationship Status:</strong> Waiting for You 💖</li>
+        <li><strong>Languages:</strong> English, Hindi</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Educational Background 🎓</h2>
+    <ul>
+      <li> <b>College :</b> BTech in Computer Science – IIIT Ranchi</li>
+      <li> <b>School : </b> KCM WORLD SCHOOL </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Hobbies & Interests 💕</h2>
+    <div class="hobbies">
+      <span>🎵 Music</span>
+      <span>💻 Coding</span>
+      <span>📸 Photography</span>
+      <span>✈️ Traveling</span>
+      <span>📚 Reading</span>
+      <span>🏋️ Fitness</span>
+    </div>
+  </div>
+
+  <div class="card valentine-msg">
+    <h2>Valentine Message 💌</h2>
+    <p>
+      You are the smile to my mornings and the heartbeat to my life. 
+      This Valentine’s Day, I just want to say thank you for being the reason behind my happiness. ❤️
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Social Profiles 🌐</h2>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/mohit-aggrawal-365a8b36a/">LinkedIn</a>
+      <a href="https://github.com/mohitaggrawal-oss">GitHub</a>
+      <a href="https://x.com/MohitA66642">Twitter X</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Made with ❤️ for Someone Special
+</footer>
+
+<script>
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+    heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 5000);
+  }
+  setInterval(createHeart, 500);
+</script>
+
+</body>
+</html> 
